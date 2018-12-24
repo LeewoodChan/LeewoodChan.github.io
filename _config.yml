@@ -1,2 +1,4 @@
-	name: Leewood Chan
-	markdown: kramdown
+name: Leewood Chan
+markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
