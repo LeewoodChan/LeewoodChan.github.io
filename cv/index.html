@@ -2,7 +2,79 @@
 layout: default
 title: Leewood Chan
 ---
+<div id="print-content">
+ <form>
+  <input type="button" onclick="printDiv('CV-Content')" value="Print CV"/>
+</form>
+</div>
+
 <div class="blurb">
-<h1>CV</h1>
-	<p>Still in Pending</p>
+<h1>My CS</h1>
+	<div id="CV-Content">
+		<H1>Leewood Chan</H1>
+		<p>3420 Tourmaline Drive, Murfreesboro, TN 37128<br>
+		<a href="mailto:leewoodchan@gmail.com">LeewoodChan@gmail.coom</a><br>
+		(615) 397-8775<br><br>
+		Willing  to relocate: Anywhere<br>
+		Authorized to work in the US for any employer</p>
+		
+		<H3>Work Experience</H3>
+		<hr>
+		<H3>IT Associate</H3>
+		<p>
+			Alorica - La Vergne, TN<br>
+			July 2017 to Present
+		</p>
+		<ul>
+			<li>Design use case and test software before deployment of new project.</li>
+			<li>Ability to solve problems through supported and troubleshoot an issue.</li>
+			<li>Gained me time management skills from working several project.</li>
+		</ul>
+		
+		<H3>VOLUNTEER</H3>
+		<p>
+			Research with Dr. Hyrum D. Carroll<br>
+			August 2016 to May 2017
+		</p>
+		<ul>
+			<li>Performed Web based and application based testing of the software solution</li>
+			<li>Reported to professor through written report and presentation.</li>
+			<li>Use version control to share code between collaborators.</li>
+		</ul>
+		
+		<H3>Education</H3>
+		<hr>
+		<H3>Bachelor of Computer Science in Computer Science</H3>
+		<p>
+			Middle Tennessee State University - Murfreesboro, TN<br>
+			August 2014 to May 2017
+		</p>
+		
+		<H3>Associate of Computer Science in Computer Science</H3>
+		<p>
+			Motlow State Community College - Tullahoma, TN<br>
+			August 2012 to May 2014
+		</p>
+		
+		<H3>Additional Information</H3>
+		<hr>
+		<p>
+			<b>Skills:</b> C, C++,C#, HTML, JavaScript, CSS, Visual Studio, Unity3D, Version Control
+		</p>
+		
+	</div>
+
 </div><!-- /.blurb -->
+
+
+
+<script type="text/javascript">
+    function printDiv(divName) {
+	//window.print();
+        var printContents = document.getElementById(divName).innerHTML;
+        w=window.open();
+        w.document.write(printContents);
+        w.print();
+        w.close();
+    }
+</script>
