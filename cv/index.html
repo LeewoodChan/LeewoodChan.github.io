@@ -1,7 +1,63 @@
----
-layout: default
-title: Leewood Chan
----
+<!DOCTYPE html>
+<HTML>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<BODY>
+
+<style>
+
+#mainheader{
+	font-size: 1.5em;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-weight:normal
+}
+
+#listheader{
+	margin-bottom: 0 !important;
+
+}
+
+#summary{
+	margin-bottom: 0 !important;
+}
+
+#print-content{
+	float: right;	
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	margin-bottom: 0;
+}
+
+h3 {
+	
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+hr {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ul {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+p {
+    font-size: 1em;
+    line-height: 1em;
+    color: #333;
+	margin-top: 0;
+
+
+
+}
+</style>
+
+
 <div id="print-content">
  <form>
   <input type="button" onclick="printDiv('CV-Content')" value="Print CV"/>
@@ -9,7 +65,6 @@ title: Leewood Chan
 </div>
 
 <div class="blurb">
-<h1>My CS</h1>
 	<div id="CV-Content">
 		<H1>Leewood Chan</H1>
 		<p>3420 Tourmaline Drive, Murfreesboro, TN 37128<br>
@@ -18,21 +73,31 @@ title: Leewood Chan
 		Willing  to relocate: Anywhere<br>
 		Authorized to work in the US for any employer</p>
 		
-		<H3>Work Experience</H3>
+		<H3 id="mainheader">Work Experience</H3>
 		<hr>
-		<H3>IT Associate</H3>
-		<p>
+		
+		<H3 id="listheader">Computer Engineer</H3>
+		<p id="summary">
 			Alorica - La Vergne, TN<br>
-			July 2017 to Present
+			Feb 2018 to Present
 		</p>
 		<ul>
 			<li>Design use case and test software before deployment of new project.</li>
+			<li>Design tools to support daily process.</li>
+		</ul>
+		
+		<H3 id="listheader">IT Associate</H3>
+		<p id="summary">
+			Alorica - La Vergne, TN<br>
+			Jul 2017 to Feb 2018
+		</p>
+		<ul>
 			<li>Ability to solve problems through supported and troubleshoot an issue.</li>
 			<li>Gained me time management skills from working several project.</li>
 		</ul>
 		
-		<H3>VOLUNTEER</H3>
-		<p>
+		<H3 id="listheader">VOLUNTEER</H3>
+		<p id="summary">
 			Research with Dr. Hyrum D. Carroll<br>
 			August 2016 to May 2017
 		</p>
@@ -42,21 +107,21 @@ title: Leewood Chan
 			<li>Use version control to share code between collaborators.</li>
 		</ul>
 		
-		<H3>Education</H3>
+		<H3 id="mainheader">Education</H3>
 		<hr>
-		<H3>Bachelor of Computer Science in Computer Science</H3>
+		<H3 id="listheader">Bachelor of Computer Science in Computer Science</H3>
 		<p>
 			Middle Tennessee State University - Murfreesboro, TN<br>
 			August 2014 to May 2017
 		</p>
 		
-		<H3>Associate of Computer Science in Computer Science</H3>
+		<H3 id="listheader">Associate of Computer Science in Computer Science</H3>
 		<p>
 			Motlow State Community College - Tullahoma, TN<br>
 			August 2012 to May 2014
 		</p>
 		
-		<H3>Additional Information</H3>
+		<H3 id="mainheader">Additional Information</H3>
 		<hr>
 		<p>
 			<b>Skills:</b> C, C++,C#, HTML, JavaScript, CSS, Visual Studio, Unity3D, Version Control
@@ -77,4 +142,10 @@ title: Leewood Chan
         w.print();
         w.close();
     }
+	
+	
 </script>
+
+
+</BODY>
+</HTML>
