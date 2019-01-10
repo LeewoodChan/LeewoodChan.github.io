@@ -1,0 +1,46 @@
+
+#mainheader{
+	font-size: 1.5em;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-weight:normal
+}
+
+#listheader{
+	margin-bottom: 0 !important;
+
+}
+
+#summary{
+	margin-bottom: 0 !important;
+}
+
+#print-content{
+	float: right;	
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	margin-bottom: 0;
+}
+
+h3 {
+	
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+hr {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ul {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+p {
+    font-size: 1em;
+    line-height: 1em;
+    color: #333;
+    margin-top: 0;
+}
