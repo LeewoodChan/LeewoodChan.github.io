@@ -2,3 +2,14 @@ name: Leewood Chan
 markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
+
+
+
+exclude:
+    - node_modules
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+        

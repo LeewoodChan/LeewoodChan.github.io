@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CS</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" href="/assets/main.css">
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top border-top border-bottom mb-5">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expaned="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbarNavDropdown" class="navbar-collapse collapse">
+		<ul class="navbar-nav">
+		  
+			<li class="nav-item">
+				<a class="nav-link" href="\" >Home</a>
+			</li>
+		  
+			<li class="nav-item">
+				<a class="nav-link" href="\about" >About</a>
+			</li>
+		  
+			<li class="nav-item">
+				<a class="nav-link" href="\cv" >CV</a>
+			</li>
+		  
+		</ul>
+	</div>
+</nav>
+
+		<div class="container">
+    		<style>
+
+#mainheader{
+	font-size: 1.5em;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	font-weight:normal;
+}
+
+#listheader{
+	font-size: 1.0em;
+	margin-bottom: 0 !important;
+
+}
+
+.info{
+	padding: 0 !important;
+	  margin-top: 0 !important;
+	list-style: none;
+}
+	
+.description{
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+#print-content{
+	float: right;	
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin-bottom: 0;
+}
+
+h3 {
+	
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+hr {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1em;
+    color: #333;
+}
+</style>
+
+
+<div id="print-content">
+ <form>
+  <input type="button" onclick="printDiv('CV-Content')" value="Print CV"/>
+  <!--input type="button" value="Print Div" onclick="PrintElem('CV-Content')" /-->
+</form>
+</div>
+
+<div class="blurb">
+	<div id="CV-Content">
+		<H1>Leewood Chan</H1>
+		<ul class="info">
+			<li>3420 Tourmaline Drive, Murfreesboro, TN 37128</li>
+			<li><a href="mailto:leewoodchan@gmail.com">LeewoodChan@gmail.com</a></li>
+			<li>(615) 397-8775<li>
+		</ul>
+		</div>
+		<H3 id="mainheader">Work Experience</H3>
+		<hr>
+		
+		<H3 id="listheader">Computer Engineer</H3>
+		<ul class="info">
+			<li>Alorica - La Vergne, TN</li>
+			<li>Feb 2018 to Present</li>
+		</ul>
+
+		<ul class="description">
+			<li>Designed, developed and tested a tool for check product features and devised test plans for module.</li>
+			<li>Implemented VBA script-based features for daily maintenance activities.</li>
+			<li>Modified existing testing software to correct coding errors, upgrade interfaces and improve overall performance.</li>
+		</ul>
+		
+		<H3 id="listheader">IT Associate</H3>
+		<ul class="info">
+			<li>Alorica - La Vergne, TN</li>
+			<li>Jul 2017 to Feb 2018</li>
+		</ul>
+
+		<ul class="description">
+			<li>Install, maintain and configure hardware and software systems according to company policies.</li>
+			<li>Test network and server systems to verify functionality and performance.</li>
+		</ul>
+		
+		
+		<H3 id="mainheader">Education</H3>
+		<hr>
+		<H3 id="listheader">Bachelor of Computer Science in Computer Science</H3>
+		<ul class="info">
+			<li>Middle Tennessee State University - Murfreesboro, TN</li>
+			<li>August 2014 to May 2017</li>
+		</ul>
+
+		<H3 id="listheader">Associate of Computer Science in Computer Science</H3>
+		<ul class="info">
+			<li>Motlow State Community College - Tullahoma, TN</li>
+			<li>August 2012 to May 2014</li>
+		</ul>
+
+		<H3 id="mainheader">Additional Information</H3>
+		<hr>
+		<p>
+			<b>Skills:</b> C, C++,C#, HTML, JavaScript, CSS, Visual Studio, Unity3D, Version Control
+		</p>
+		
+	</div>
+
+</div><!-- /.blurb -->
+
+
+
+<script type="text/javascript">
+    function printDiv(divName) {
+	//window.print();
+        var printContents = document.getElementById(divName).innerHTML;
+        w=window.open();
+        w.document.write(printContents);
+        w.print();
+        w.close();
+    }
+	function PrintElem(elem)
+	{
+		Popup($('<div/>').append($(elem).clone()).html());
+	}
+
+	function Popup(data) 
+	{
+		var mywindow = window.open('', 'my div', 'height=400,width=600');
+		mywindow.document.write('<html><head><title>my div</title>');
+		mywindow.document.write('<link rel="stylesheet" href="/css/cv.css" type="text/css" />');
+		mywindow.document.write('</head><body >');
+		mywindow.document.write(data);
+		mywindow.document.write('</body></html>');
+
+		mywindow.print();
+		//mywindow.close();
+
+		return true;
+	}	
+	
+</script>
+
+
+		</div><!-- /.container -->
+        
+        <!-- Footer -->
+<footer class="container mt-5 py-2">
+    <div class="mx-auto">
+
+        <!-- Github -->
+        <a class="fa-stack fa-lg " href="https://github.com/LeewoodChan">
+            <i class="fa fa-circle fa-stack-2x" style="color: black"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </a>
+        <!--Linkedin -->
+        <a class="fa-stack fa-lg" href="https://www.linkedin.com/in/leewood-chan-172596109/">
+            <i class="fa fa-circle fa-stack-2x" style="color: black"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </a>
+        <!-- Google +-->
+        <a class="fa-stack fa-lg" href="mailto:leewoodchan@gmail.com">
+            <i class="fa fa-circle fa-stack-2x" style="color: black"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </a>
+    </div>
+
+    <div class="text-center border-top py-2 mt-2 border-dark">
+        Powered by Jekyll
+    </div>
+
+</footer>
+<!-- Footer -->        
+	</body>
+</html>
