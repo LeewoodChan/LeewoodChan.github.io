@@ -3,6 +3,8 @@
 
 @import "variables";
 @import "bootstrap/scss/bootstrap";
+$fa-font-path: "fonts/font-awesome/";
+@import 'font-awesome';
 
 .content {
   font-size: $custom-font-size;

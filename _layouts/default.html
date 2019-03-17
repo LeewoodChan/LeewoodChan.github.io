@@ -7,14 +7,16 @@
         <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
         <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
         <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+				<script src="{{'/node_modules/fontawesome-free-5.7.2-web/css/all.css' | prepend: site.baseurl}}"></script>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 	</head>
 	<body>
         {% include header.html %}
 		<div class="container">
     		{{ content }}
 		</div><!-- /.container -->
-        
-        {% include footer.html %}        
+
+        {% include footer.html %}
 	</body>
 </html>

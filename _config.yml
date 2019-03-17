@@ -2,7 +2,11 @@ name: Leewood Chan
 markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
+gems:
+  - jekyll-font-awesome-sass
 
+font-awesome:
+  assets: true
 
 
 exclude:
@@ -12,4 +16,3 @@ sass:
     load_paths:
         - _sass
         - node_modules
-        
