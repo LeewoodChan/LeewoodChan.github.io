@@ -11799,3 +11799,8 @@ readers do not read off random characters that represent icons */
 
 .content {
   font-size: 20px; }
+
+.list-group {
+  max-height: 300px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
