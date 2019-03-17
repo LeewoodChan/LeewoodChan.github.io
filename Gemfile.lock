@@ -61,6 +61,7 @@ GEM
     sassc (2.0.1)
       ffi (~> 1.9)
       rake
+    wdm (0.1.1)
 
 PLATFORMS
   x64-mingw32
@@ -68,6 +69,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-font-awesome-sass
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.0.1
