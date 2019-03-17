@@ -4,10 +4,17 @@ title: player
 ---
 <h1>Player</h1>
 
+<style>
+
+    .list-group{
+        max-height: 300px;
+        overflow:scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
 
 
-
-<div class="container border px-0 border-warning bg-dark" id="audiowrap" >
+<div class="container border px-0 border-warning bg-dark" id="audiowrap">
     <div class="row mx-0" id="audio0">
         <audio class="m-0 col-sm-12 border p-0" preload id="audio1" controls="controls">
             Your browser does not support HTML5 Audio!
@@ -17,7 +24,7 @@ title: player
         <button type="button" name="button" class="btn btn-dark col">
             <i class="fas fa-fast-backward" style="color:white"></i>
         </button>
-        <a class="col-8 text-center text-white border">Now playing.......</a>
+        <a class="col-8 text-center text-white">Now playing.......</a>
         <button type="button" name="button" class="btn btn-dark col">
             <i class="fas fa-fast-forward" style="color:white"></i>
         </button>
