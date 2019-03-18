@@ -2,6 +2,7 @@ name: Leewood Chan
 markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
+<<<<<<< HEAD
 plugins:
   - jekyll-font-awesome-sass
 
@@ -16,3 +17,5 @@ sass:
     load_paths:
         - _sass
         - node_modules
+=======
+>>>>>>> parent of ec6b714... Add bootstrap
