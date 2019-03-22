@@ -14,12 +14,10 @@ title: player
 </style>
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<!--script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script-->
 
 <script type="text/javascript">//<![CDATA[
     $(function(){
-    
-
     
     document.getElementById("nextAudio").onclick = function() {
         forward();
@@ -47,7 +45,13 @@ title: player
             //console.log(currentPlay.text());
             //console.log($(this).text());
         });
-        
+
+          $('#audio-player').on('ended', function() {
+            
+            //alert("done");
+            forward();
+            // enable button/link
+          });
 
                 
     });    
@@ -72,6 +76,7 @@ title: player
     }
         
     var forward = function(){
+        //alert("forward");
         var current = $(".active").next();
         var currentText = current.text();
         var currentUrl;
@@ -87,9 +92,6 @@ title: player
         change(currentUrl);
         current.addClass('active');
         updateCurrentPlay();
-        $("audio-player").on('ended',function(){
-              alert('Video has ended!');
-            });
 
    
     }
@@ -111,9 +113,6 @@ title: player
         change(currentUrl);
         current.addClass('active');
         updateCurrentPlay();
-        $("audio-player").on('ended',function(){
-              alert('Video has ended!');
-            });
 
     }
 

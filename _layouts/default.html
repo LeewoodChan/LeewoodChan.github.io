@@ -5,6 +5,9 @@
 	   <title>{{ page.title }}</title>
         <meta charset="utf-8">
         {% include head.html %}
+        <script src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl}}"></script>
+        <script src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl}}"></script>
+        <script src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl}}"></script>
 
 	</head>
 	<body>
@@ -14,8 +17,6 @@
 		</div><!-- /.container -->
 
         {% include footer.html %}
-        <script src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl}}"></script>
-        <script src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl}}"></script>
-        <script src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+
 	</body>
 </html>

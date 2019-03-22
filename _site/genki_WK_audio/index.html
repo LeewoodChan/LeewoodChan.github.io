@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+        <script src="/assets/vendor/jquery.min.js"></script>
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
 
 	</head>
 	<body>
@@ -54,12 +57,10 @@
 </style>
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<!--script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script-->
 
 <script type="text/javascript">//<![CDATA[
     $(function(){
-    
-
     
     document.getElementById("nextAudio").onclick = function() {
         forward();
@@ -87,7 +88,13 @@
             //console.log(currentPlay.text());
             //console.log($(this).text());
         });
-        
+
+          $('#audio-player').on('ended', function() {
+            
+            //alert("done");
+            forward();
+            // enable button/link
+          });
 
                 
     });    
@@ -112,6 +119,7 @@
     }
         
     var forward = function(){
+        //alert("forward");
         var current = $(".active").next();
         var currentText = current.text();
         var currentUrl;
@@ -127,9 +135,6 @@
         change(currentUrl);
         current.addClass('active');
         updateCurrentPlay();
-        $("audio-player").on('ended',function(){
-              alert('Video has ended!');
-            });
 
    
     }
@@ -151,9 +156,6 @@
         change(currentUrl);
         current.addClass('active');
         updateCurrentPlay();
-        $("audio-player").on('ended',function(){
-              alert('Video has ended!');
-            });
 
     }
 
@@ -287,8 +289,6 @@
     </div>
 
 </footer>
-        <script src="/assets/vendor/jquery.min.js"></script>
-        <script src="/assets/vendor/popper.min.js"></script>
-        <script src="/assets/vendor/bootstrap.min.js"></script>
+
 	</body>
 </html>
