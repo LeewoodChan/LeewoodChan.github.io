@@ -61,7 +61,7 @@
 
 <script type="text/javascript">//<![CDATA[
     $(function(){
-    
+
     document.getElementById("nextAudio").onclick = function() {
         forward();
     }
@@ -75,7 +75,7 @@
             var startUrl = $(".song").first(0).attr('source');
             console.log(startUrl);
             $("#mp3_src").attr("src", startUrl);
-            var audio = $("audio-player");  
+            var audio = $("audio-player");
             $('audio').get(0).load();
             updateCurrentPlay();
 
@@ -90,17 +90,17 @@
         });
 
           $('#audio-player').on('ended', function() {
-            
+
             //alert("done");
             forward();
             // enable button/link
           });
 
-                
-    });    
+
+    });
 
     function change(sourceUrl) {
-            var audio = $("audio-player");    
+            var audio = $("audio-player");
 
             $("#mp3_src").attr("src", sourceUrl);
             $(".song").removeClass("active");
@@ -109,15 +109,15 @@
             $('audio').get(0).load();//suspends and restores all audio element
             $('audio').get(0).play();
     }
-    
-        
+
+
     var updateCurrentPlay = function(){
         var currentPlay = $("#currentPlay");
         var current = $(".active").text();
         console.log("current:" + current);
         currentPlay.text(current);
     }
-        
+
     var forward = function(){
         //alert("forward");
         var current = $(".active").next();
@@ -136,7 +136,7 @@
         current.addClass('active');
         updateCurrentPlay();
 
-   
+
     }
     var backward = function(){
 
@@ -148,7 +148,7 @@
             //current = $(".song").last(0).text();
             currentUrl = $(".song").last(0).attr('source');
             current =$(".song").last(0);
-            
+
         }else{
             currentUrl = $(".active").prev().attr('source');
         }
@@ -159,12 +159,12 @@
 
     }
 
-    
-    
- 
-        
-        
-    });//]]> 
+
+
+
+
+
+    });//]]>
 </script>
 
 <div class="container border px-0 border-warning bg-dark" id="audiowrap">
@@ -408,6 +408,27 @@
 
 
 </div>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://leewoodchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 		</div><!-- /.container -->
 
