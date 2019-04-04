@@ -1,7 +1,7 @@
 name: Leewood Chan
 markdown: kramdown
 
-permalink: /blog/:year/:month/:day/:title
+
 
 
 exclude:
