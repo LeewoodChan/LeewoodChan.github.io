@@ -3,7 +3,7 @@ layout: post
 title: Genki Workbook Audio
 comments: true
 # other options
-permalink: "/genki_WK_audio"
+permalink: "/genki_WK_audio/"
 ---
 <style>
 
